@@ -1,0 +1,39 @@
+#include<stdio.h>
+void main()
+{
+    int t,emp,take[100],i,sum=0;
+    printf("Enter the test case\n");
+    scanf("%d",&t);
+
+    printf("enter the number of employees\n");
+    scanf("%d",&emp);
+    printf("Rank of Employees:\n");
+    for(i=1; i<=emp; i++)
+    {
+        scanf("%d",&take[i]);
+
+    }
+    for(i=1; i<=emp; i++)
+    {   if(i%2==0)
+            take[i]=2;
+        else
+            take[i]=1;
+
+
+    }
+    printf("Number of Gifts to corresponding employees:\n");
+    for(i=1; i<=emp; i++)
+    {
+        printf(" %d",take[i]);
+
+    }
+    for(i=1; i<=emp; i++)
+    {
+        sum=sum+take[i];
+    }
+    printf("\n");
+    printf("Total gifts:%d",sum);
+}
+
+
+
